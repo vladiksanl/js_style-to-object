@@ -8,15 +8,15 @@
 function convertToObject(sourceString) {
   // write your code here
 
-  const arrayFromString = sourceString
+  const cssPairs = sourceString
     .split(';')
     .map((element) => element.trim())
     .filter((element) => element.length > 0)
     .map((element) => element.split(':').map((part) => part.trim()));
 
-  const fromArrayToObject = Object.fromEntries(arrayFromString);
+  const cssObject = Object.fromEntries(cssPairs);
 
-  return fromArrayToObject;
+  return cssObject;
 }
 
 module.exports = convertToObject;
