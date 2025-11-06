@@ -14,9 +14,9 @@ function convertToObject(sourceString) {
     .filter((element) => element.length > 0)
     .map((element) => element.split(':').map((part) => part.trim()));
 
-  const cssObject = Object.fromEntries(cssPairs);
+  const styles = Object.fromEntries(cssPairs);
 
-  return cssObject;
+  return styles;
 }
 
 module.exports = convertToObject;
